@@ -18,12 +18,14 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_DB: hello
           POSTGRES_PASSWORD: postgres
-          
+
     working_directory: ~/repo
     steps:
       - checkout
 
       # specify any bash command here prefixed with `run: `
-      - run: mix deps.get
-      - run: mix ecto.create
-      - run: mix test
+      - run: elixir --version
+      - run: mix phx.new -v
+      # - run: mix deps.get
+      # - run: mix ecto.create
+      # - run: mix test
