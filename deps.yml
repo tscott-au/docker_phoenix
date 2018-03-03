@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  phx:
+    image: bitwalker/alpine-elixir-phoenix:1.6.1
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:10.2-alpine
+    
+  

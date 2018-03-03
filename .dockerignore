@@ -1,0 +1,8 @@
+/_build
+/db
+/deps
+/config
+/lib
+/priv
+/test
+/*.ez

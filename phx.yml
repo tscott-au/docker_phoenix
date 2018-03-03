@@ -1,0 +1,28 @@
+version: '3.5'
+services:  
+  phx:
+    # tell docker-compose which Dockerfile it needs to build
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    # map the port of phoenix to the local dev port
+    ports:
+      - "4001:4000"
+    # mount the code folder inside the running container for easy development
+    volumes:
+      - ./:/app
+      
+  postgres:
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  adminer:
+    image: adminer:4.6
+    restart: always
+    ports:
+      - 8080:8080
+    
+    
