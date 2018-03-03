@@ -14,6 +14,6 @@ config :hello, Hello.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "hello_test",
-  hostname: "localhost",
+  database: "hello",
+  hostname: "postgres",
   pool: Ecto.Adapters.SQL.Sandbox
