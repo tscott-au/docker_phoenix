@@ -29,6 +29,6 @@ jobs:
       - run: elixir --version
       - run: mix deps.get
       - run: mix phx.new -v
-      # - run: mix deps.get
-      # - run: mix ecto.create
-      # - run: mix test
+      - run: mix ecto.create
+      - run: mix ecto.migrate
+      - run: mix test
